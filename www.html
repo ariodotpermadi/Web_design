@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Smart Change</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+    html, body {
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Bahnschrift Light";
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin: auto;    
+    height: 100%;
+    }
+
+    
+
+    #bg1, img{     
+        
+        height: 700px;
+        width: 650px;
+        margin: 0 -250px 0 0;
+        float: right;
+        
+    }
+
+    #text_atas{
+        margin: 120px 0 0 -200px;
+        
+        height: 400px;
+        width: 620px;
+    }
+
+    .paragrap1{
+        padding-top: 20px;
+    }
+
+   .bg-tengah, .gb_tengah{      
+       
+       width: 80px;
+       height:170px;
+       float: left;
+       margin: 50px 0 0 -125px; 
+   }
+
+   .h1_tengah{
+        text-align: center;
+        margin-top: 130px;
+   }
+/*GARIS BAWAH MERAH */
+   .garis1{
+       border: 4px solid red;
+       width: 40%;
+       float: left;
+       margin: 0 0 0 0;
+   }
+
+   .garis2{
+       border: 4px solid red;
+       width: 20%;
+   }
+
+   .garis3{
+       border: 4px solid red;
+       width: 40%;
+   }
+
+   .garis4{
+       width: 20%;
+       border: 4px solid white;
+       margin: 150px 0 0 220px;
+       position: absolute;
+   }
+
+   .garis5{
+       width: 20%;
+       border: 4px solid red;
+       margin: 10px 0 0 270px;
+       position: absolute;
+   }
+/*========================================*/
+
+/*BOX AGENDA */
+   .box-agenda {
+       width: 150%;
+       height: 45%;
+       margin: 0 0 0 -180px;
+       padding: 0 0 0 60px;
+       
+       
+   }
+
+   .card1{
+       box-shadow: 3px 3px 12px 7px  rgb(69, 136, 236) ;
+       height: 600px;
+       width: 300px;
+       float: left;
+       margin: 25px;
+       
+   }
+
+   .day1{
+       width:250px ;
+       background-color: #002175;
+       border-radius: 30px;
+       position: absolute;
+       margin: 20px 0 0 25px;
+   } 
+   h2{
+        
+        text-align: center;
+        color: white;
+        margin-top: 10px;
+   }
+   
+   .tanggal-acara{       
+       margin: 100px 0 0 60px;
+   }
+
+   .segitiga{
+       margin: 0 120px 0 0;
+       width: 50px;
+       height: 50px;
+   }
+
+   .segitiga2{
+       margin: 10px 130px 0 0;
+       width: 25px;
+       height: 25px;
+   }
+
+   .opening{
+       background-color: #002175;
+       color: white;
+       padding: 16px;
+       cursor: pointer;
+       margin: 5px 0 0 24px;
+       height: 135px;
+       width: 250px;
+       text-align: center;
+   }
+   .dropdown {
+       position: relative;
+       display: inline-block;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        width: 500px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin: 10px 0 0 -16px;
+    }
+    .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/*=================================== */
+
+/*BAGIAN REGISTER */
+   .register, .bg-register{
+       width: 1300px;
+       height: 300px;
+       margin: -450px 300px 0 0;
+   }
+    .text-dalam{
+       position: absolute;
+       font-size: 40px;
+       color:white;
+       text-align: center;
+       margin:-400px -100px 0 0;       
+   }
+   #tombol{
+       position: absolute;
+       margin: -250px 0 0 300px;
+   }
+
+   .text-center{
+        width: 1000px;
+        height: 100px;
+        margin: -450px 0 0 -150px ;
+        
+   }
+   .p-center{
+       text-align: center;
+       font-size: medium;
+   }
+   /*====================================*/
+   /*Background bawah*/
+   .bg-kanan, .gb-kanan{
+       width: 80px;
+       height:180px;
+       margin: 10px 0 0 920px;
+       
+   }
+   /*============================================ */
+
+   /*Why Attend*/
+   .h1-attend{
+        text-align: center;
+        margin-top: -150px;
+   }
+   .bg-attend, .attend{
+       
+       width: 1000px;
+       height: 530px;
+       margin: 20px 0 0 -120px;
+   }
+/*============================================ */
+
+/*SPEAKER======================================*/
+  .box-speaker, .speaker{
+       width: 1300px;
+       height: 800px;
+       margin: 50px 300px 0 0;
+   }
+
+   .box1{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  10px 0 0 -80px;
+   }
+
+   .box2{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  10px 0 0 150px;
+   }
+
+   .box3{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  10px 0 0 380px;
+   }
+
+   .box4{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  10px 0 0 610px;
+   }
+
+   .box5{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  10px 0 0 830px;
+   }
+
+   .box6{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  250px 0 0 -80px;
+   }
+   
+   .box7{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  250px 0 0 150px;
+   }
+
+   .box8{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  250px 0 0 380px;
+    }
+
+    .box9{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  250px 0 0 610px;
+   }
+
+   .box10{
+       width: 150px;
+       height: 200px;
+       float: left;
+       position: absolute;
+       margin:  250px 0 0 830px;
+   }
+
+   .h1-speaker{
+       position: absolute;
+       text-align: center;
+       margin: 100px 0 0 250px;
+       color: white;
+   }
+
+   #frame{
+       position: absolute;
+       width:150px ;
+       height:200px;
+       border: 5px solid white;
+       margin: 200px 0 0 -100px;
+       background-image: url(gambar/ceo/ceo1.jpeg);
+   }
+
+   #name {
+       position: absolute;
+       margin: 410px 0 0 -90px;
+       color: white;
+   }
+
+   #tittle{
+       position: absolute;
+       margin: 440px 0 0 -50px;
+       color: white;
+   }
+/*============================================ */
+   /*LOGO*/
+   .logo{
+    width: 1300px;
+       height: 300px;
+       margin: 15px -270px 0 0;
+   }
+   /*=========================================*/
+   
+/*PARTNERS*/
+.h1-partners{
+    
+       text-align: center;
+       margin: 100px 0 0 30px;
+       color: black;
+}
+
+.bawah{
+       width: 1300px;
+       height: 800px;
+       margin: 0 -230px 0 0;
+       float: right;
+}
+.copyright{
+    position: absolute;
+    margin: 750px 0 0 130px;
+}
+/*============================================*/
+
+    
+
+        /* untuk layar berukuran device kecil */
+        @media screen and (min-width:450px) {
+            .welcome, .btn_img1, .btn_img2, .btn_img3, .btn_img4, .btn_img5, .btn_img6, .btn_img7, .btn_img8{
+                width:50%
+            }
+        }
+
+        
+        /*Untuk layar berukuran sedang */
+        @media screen and (min-width:550px) {
+           .welcome, .btn_img1, .btn_img2, .btn_img3, .btn_img4, .btn_img5, .btn_img6, .btn_img7, .btn_img8{
+                width:67%
+            }
+            
+        }
+
+        /*untuk layar device berukuran besar*/
+        @media screen and (min-width: 800px) {
+        .container-fluid {
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }     
+
+    </style>
+        
+
+    </head>
+<body>
+
+<nav class="navbar navbar-expand-lg  navbar-default fixed-top" style="background-color:#002175; width: 1270px;">
+    
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: white; margin: 0 0 0 -200px; ">JAKARTA FUTURE CITY FORUM</a>
+    </div>
+    <ul class="nav navbar-nav ">
+      <li class="active"><a href="#aboutUs" style="color: white; margin: 0 20px 0 0;">ABOUT US</a></li>
+      <li><a href="#myAgenda" style="color: white; margin: 0 20px 0 0;">AGENDA</a></li>
+      <li><a href="#whyAttend" style="color: white; margin: 0 20px 0 0;">WHY ATTENDS</a></li>
+      <li><a href="#joinUs" style="color: white; margin: 0 20px 0 0;">JOIN US</a></li>
+      <li><a href="#partners" style="color: white; margin: 0 -250px 0 0;">PARTNERS</a></li>
+    </ul>
+  </div>
+</nav>
+<!--Design atas-->
+<div class="container-fluid">
+        <!--Image patung HI atas-->
+        <img src="gambar/bg_utama.png" class="bg1" id="aboutUs">
+    <div id="text_atas">
+    <h1 >Entrepreneurship & Innovation Summit 2021</h1>
+    <hr class="garis1" >
+    <p class="paragrap1">To realize the positive benefit of disrupsion and change in our world, together with Smart Change Initiative,
+        we are proud to host Entrepreneurship & Innovation Summit 2021. Our strategic theme this year is "Resilient Entrepreneurship Ecosystem : 
+        An engine for job creation and inclusive growth in Indonesia", focusing on providing connections and insight from some of the initiatives conducted by Smart Change.
+    </p>
+    <p>
+        Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+        local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+        new solution within the Entrepreneurship Ecosystem.
+    </p>
+    </div>
+</div><br><br>
+
+<!--Design tengah-->
+<div class="container-fluid">
+<div class="bg-tengah">
+    <img src="gambar/jadwal_bg.png" class="gb_tengah">
+</div>
+<h1 class="h1_tengah" id="myAgenda">AGENDA</h1>
+<hr class="garis2">
+<!--box agenda-->
+<div class="box-agenda">
+    <!--CARD 1-->
+    <div class="card1">
+        <div class="day1">
+            <h2>DAY 1</h2>    
+        </div>
+        <h4 class="tanggal-acara">7 Desember 2021</h4>
+        <hr class="garis3">
+    
+        <div class="dropdown">
+        <div class="opening">
+            Opening Talkshow JAKARTA AS THE INNOVATION HUB OF INDONESIA (Virtual Townhall with JSC by enpact)  
+            <div class="dropdown-content">
+                <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                    local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                    new solution within the Entrepreneurship Ecosystem.</a>
+                
+            </div>
+        </div>
+        </div>
+        
+        <div class="dropdown">
+            <div class="opening">
+                Navigating Public Private Partnership in Healthcare Sector During The Pandemic (FCA)
+                <div class="dropdown-content">
+                <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                    local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                    new solution within the Entrepreneurship Ecosystem.</a>
+                
+            </div>
+            </div>
+        </div>
+        
+        <div class="dropdown">
+            <div class="opening">
+                Mindset of Future Entrepreneurs with Future Class (OLC)
+                <div class="dropdown-content">
+                <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                    local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                    new solution within the Entrepreneurship Ecosystem.</a>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <!--CARD 2-->
+    <div class="card1">
+        <div class="day1">
+            <h2>DAY 2</h2>    
+        </div>
+        <h4 class="tanggal-acara">8 Desember 2021</h4>
+        <hr class="garis3">
+        
+        <div class="dropdown">
+        <div class="opening">
+            Showcase & Talkshow 3: Entrepreneurship Study
+            <div class="dropdown-content">
+                <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                    local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                    new solution within the Entrepreneurship Ecosystem.</a>
+                
+            </div>
+        </div>
+        </div>
+        
+        <div class="dropdown">
+            <div class="opening">
+                Ideas for Smart Economy and Smart Governance - Cross-sectoral pilot initiatives for smart and sustainable development in Jakarta
+                <div class="dropdown-content">
+                <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                    local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                    new solution within the Entrepreneurship Ecosystem.</a>
+                
+            </div>
+            </div>
+        </div>        
+    </div>
+    <!---->
+
+    <!--CARD 3-->
+    <div class="card1">
+        <div class="day1">
+            <h2>DAY 3</h2>    
+        </div>
+        <h4 class="tanggal-acara">9 Desember 2021</h4>
+        <hr class="garis3">
+        
+        <div class="dropdown">
+        <div class="opening">
+            Press Release
+            <div class="dropdown-content">
+                <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                    local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                    new solution within the Entrepreneurship Ecosystem.</a>                
+            </div>
+        </div>
+        </div>
+
+        <div class="dropdown">
+            <div class="opening">
+                Demoday
+                <div class="dropdown-content">
+                    <a href="none">Entrepreneurship & Innovation Summit 2021 is part of Smart Change initiative, a unique collaboration of the 
+                        local authorities Jakarta, Berlin, Bangkok empowering Smart City and Urban Innovation Ecosystems. The Summit offers a premiere opportunity to build connections and to pursue 
+                        new solution within the Entrepreneurship Ecosystem.</a>                
+                </div>
+            </div>
+            </div>
+    </div>
+    <!---->
+</div>
+<!--Register-->
+<div class="container-fluid">
+<div class="register">
+    <img src="gambar/register_bg.png" class="bg-register" id="joinUs">
+    <p class="text-dalam" >Just Hit The Button To Join This Event</p>
+    <button class="btn btn-lg" style="background-color: #de0014;" id="tombol"><a href="https://linktree.com" style="color: white; text-decoration:none">JOIN</a></button>    
+</div> <br>
+<!--Text center-->
+<div class="text-center">
+        <p class="p-center"><strong>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra est non dolor scelerisque, eu gravida nisl fringilla. Donec non convallis nunc. In ut ex quis diam sagittis fringilla vitae sodales justo. 
+        Phasellus ullamcorper sed ante vel ornare. Ut at ligula tincidunt, elementum ante et, sodales turpis. Nullam tincidunt congue leo ac gravida. Nunc justo lectus, consequat a neque eget, scelerisque bibendum lorem. 
+        Integer eget elit a mauris bibendum gravida at eget mauris.
+        </p></strong>
+</div>
+</div>
+<br>
+<!--Background mini Kanan-->
+<div class="container-fluid">
+<div class="bg-kanan">
+        <img src="gambar/jadwal-right.png" class="gb-kanan">
+</div>
+<h1 class="h1-attend" id="whyAttend">WHY ATTEND</h1>
+<hr class="garis3">
+</div>
+<div class="container">
+    <div class="bg-attend">
+        <img src="gambar/attend.png" class="attend">
+    </div>
+</div>
+<!--Speakers-->
+<div class="container-fluid">
+    <div class="box-speaker">
+    <img src="gambar/bg_speaker.png" class="speaker">
+    <h1 class="h1-speaker">SPEAKERS</h1>
+    <hr class="garis4">  
+        <div class="box1">
+        <div id="frame">            
+        </div>
+        <h3 id="name">JOHN DOE</h3>
+        <h5 id="tittle">Tittle</h5>        
+        </div>
+        
+        <div class="box2">
+            <div id="frame">            
+            </div>
+            <h3 id="name">JOHN DOE</h3>
+            <h5 id="tittle">Tittle</h5>        
+            </div>
+            
+            <div class="box3">
+                <div id="frame">            
+                </div>
+                <h3 id="name">JOHN DOE</h3>
+                <h5 id="tittle">Tittle</h5>        
+            </div>
+
+            <div class="box4">
+                <div id="frame">            
+                </div>
+                <h3 id="name">JOHN DOE</h3>
+                <h5 id="tittle">Tittle</h5>        
+            </div>
+            
+            <div class="box5">
+                <div id="frame">            
+                </div>
+                <h3 id="name">JOHN DOE</h3>
+                <h5 id="tittle">Tittle</h5>        
+            </div>
+            <br><br>
+            <div class="box6">
+                <div id="frame">            
+                </div>
+                <h3 id="name">JOHN DOE</h3>
+                <h5 id="tittle">Tittle</h5>        
+                </div>
+
+                <div class="box7">
+                    <div id="frame">            
+                    </div>
+                    <h3 id="name">JOHN DOE</h3>
+                    <h5 id="tittle">Tittle</h5>        
+                    </div>
+
+                    <div class="box8">
+                        <div id="frame">            
+                        </div>
+                        <h3 id="name">JOHN DOE</h3>
+                        <h5 id="tittle">Tittle</h5>        
+                        </div>
+
+                        <div class="box9">
+                            <div id="frame">            
+                            </div>
+                            <h3 id="name">JOHN DOE</h3>
+                            <h5 id="tittle">Tittle</h5>        
+                            </div>
+
+                            <div class="box10">
+                                <div id="frame">            
+                                </div>
+                                <h3 id="name">JOHN DOE</h3>
+                                <h5 id="tittle">Tittle</h5>        
+                                </div>
+            
+    </div>
+</div>
+<!--LOGO-->
+<div class="container">
+    <img src="gambar/logo.png" class="logo">
+</div>
+<!---->
+<!--Partners-->
+<div id="partners"></div>
+<h1 class="h1-partners">PARTNERS</h1>
+<hr class="garis5">
+<div class="container-fluid">
+    <img src="gambar/bawah.png" class="bawah">
+    <div class="copyright">
+        <p>&copy; Copyright Jakarta Future City Forum. All Right Reserved  <script>document.write(new Date().getFullYear())</script></p>
+    </div>
+</div>
+<!---->
+</div>
+</body>
+</html>
